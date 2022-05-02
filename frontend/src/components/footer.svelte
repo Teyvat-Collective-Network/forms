@@ -7,7 +7,7 @@
       light: 'moon',
     }
   }
-  let theme = window.localStorage.getItem('theme') || 'light';
+  let theme = window.localStorage.getItem('theme') || 'dark';
   $: document.getElementById('themelink').href = `styles/${theme}.css`;
   $: window.localStorage.setItem('theme', theme);
 </script>
