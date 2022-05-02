@@ -17,7 +17,6 @@
     }
     
     const fields = form.stages.reduce((a,v) => a.concat(v.fields), []);
-    console.log(fields);
     fetch(`api/forms/${parts[0]}/responses`, {
       method: 'POST',
       body: JSON.stringify(fields),

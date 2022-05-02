@@ -35,6 +35,7 @@
 
   p {
     cursor: pointer;
+    white-space: pre-line;
   }
 
   .indicator {

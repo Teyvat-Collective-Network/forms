@@ -16,6 +16,10 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
+pre {
+  font-family: 'Outfit', sans-serif;
+}
+
 a {
   color: var(--txt-main);
   text-decoration: none;

@@ -14,7 +14,7 @@
 
 <div class="field" class:missing={showRequired && field.required && (!field.value || field.value.length > field.options?.max)}>
   <h4>{field.name}</h4>
-  <p>{field.description}</p>
+  <p class="description">{field.description}</p>
   <div class="input">
     {#if field.options?.max}
       <div class="counter" style={charCount>field.options.max?'color:red':''}>{charCount}/{field.options.max}</div>
@@ -32,6 +32,10 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+  }
+
+  .description {
+    white-space: pre-line;
   }
 
   .missing {

@@ -29,6 +29,7 @@
   }
 
   .description {
+    white-space: pre-line;
     flex-grow: 1;
   }
   

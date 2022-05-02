@@ -14,7 +14,7 @@
 
 <div class="field" class:missing={showRequired && field.required && field.value == null}>
   <h4>{field.name}</h4>
-  <p>{field.description}</p>
+  <p class="description">{field.description}</p>
   <div class="options">
     {#each field.options as option, i}
       <div class="option" class:selected={field.value === i} on:click={select(i)}><span class="indicator"></span>{option}</div>
@@ -32,7 +32,10 @@
     flex-direction: column;
     gap: 4px;
   }
-
+  
+  .description {
+    white-space: pre-line;
+  }
   .missing {
     border: 1px solid red;
     padding: 15px;

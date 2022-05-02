@@ -18,7 +18,7 @@
 
 <div class="field">
   <h4>{field.name}</h4>
-  <p>{field.description}</p>
+  <p class="description">{field.description}</p>
   <div class="options" bind:this={options}>
     {#each field.options as option}
       <div class="option">
@@ -38,6 +38,10 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+  }
+
+  .description {
+    white-space: pre-line;
   }
 
   .options {

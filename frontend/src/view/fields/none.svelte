@@ -19,4 +19,8 @@
     flex-direction: column;
     gap: 4px;
   }
+
+  p {
+    white-space: pre-line;
+  }
 </style>
