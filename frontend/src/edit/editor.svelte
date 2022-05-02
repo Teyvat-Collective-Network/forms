@@ -64,8 +64,8 @@
 
 <div class="editor">
   <div class="header">
-    <input class="name" class:missing={showRequired && !form.name} type="text" bind:value={form.name}>
-    <textarea on:input={resize} bind:value={form.description}></textarea>
+    <input class="name" placeholder="form name" class:missing={showRequired && !form.name} type="text" bind:value={form.name}>
+    <textarea on:input={resize} placeholder="form description" bind:value={form.description}></textarea>
 
     <div class="access">
       <div class="view">
@@ -85,7 +85,7 @@
           <div class="users">
             {#each form.access.view.users as _user, i}
               <div class="user">
-                <input class="user" type="text" bind:value={form.access.view.users[i]}>
+                <input class="user" placeholder="user ID" type="text" bind:value={form.access.view.users[i]}>
                 <span class="cross fa-solid fa-xmark" on:click={() => { form.access.view.users.splice(i, 1); form.access.view.users = form.access.view.users }}></span>
               </div>
             {/each}
@@ -105,7 +105,7 @@
         <div class="users">
           {#each form.access.edit.users as _user, i}
             <div class="user">
-              <input class="user" type="text" bind:value={form.access.edit.users[i]}>
+              <input class="user" placeholder="user ID" type="text" bind:value={form.access.edit.users[i]}>
               <span class="cross fa-solid fa-xmark" on:click={() => { form.access.edit.users.splice(i, 1); form.access.edit.users = form.access.edit.users }}></span>
             </div>
           {/each}

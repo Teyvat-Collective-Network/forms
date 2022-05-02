@@ -69,7 +69,7 @@
   <div class="header">
     <span class="arrow fa-solid fa-angle-right" on:click={() => open = !open}></span>
     <span class="stage-handle fa-solid fa-bars"></span>
-    <input type="text" class:missing={showRequired && !stage.name} bind:value={stage.name}>
+    <input type="text" placeholder="stage name" class:missing={showRequired && !stage.name} bind:value={stage.name}>
     <span class="cross fa-solid fa-xmark" on:click={remove}></span>
   </div>
 

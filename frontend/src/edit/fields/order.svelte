@@ -42,17 +42,17 @@
   <div class="header">
     <span class="field-handle fa-solid fa-bars"></span>
     <span class="type">{field.type}</span>
-    <input type="text" class:missing={showRequired && !field.name} bind:value={field.name}>
+    <input type="text" placeholder="field name" class:missing={showRequired && !field.name} bind:value={field.name}>
     <span class="cross fa-solid fa-xmark" on:click={remove}></span>
   </div>
 
-  <textarea on:input={resize} bind:value={field.description}></textarea>
+  <textarea placeholder="field description" on:input={resize} bind:value={field.description}></textarea>
 
   <div class="options" bind:this={options}>
     {#each field.options as option, i}
       <div class="option">
         <span class="option-handle fa-solid fa-bars"></span>
-        <input type="text" class:missing={showRequired && !option} on:input={editOption(i)} value={option}>
+        <input type="text" placeholder="value" class:missing={showRequired && !option} on:input={editOption(i)} value={option}>
         <span class="cross fa-solid fa-xmark" on:click={removeOption(i)}></span>
       </div>
     {/each}
